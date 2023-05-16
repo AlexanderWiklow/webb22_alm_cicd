@@ -4,10 +4,15 @@ on:
     branches:
       - 'main'
 
+env:
+  WELCOME_PHRASE: Hello
+
 jobs:
   code_quality:
     runs-on: ubuntu-latest
     steps:
+      - name: 'Say Hello'
+        run: echo "$WELCOME_PHRASE"
       - name: npm install
         run: npm install
       - name: npm lint
