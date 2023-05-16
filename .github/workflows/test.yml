@@ -1,0 +1,16 @@
+name: code_quality
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  code_quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: npm install
+        run: npm install
+      - name: npm lint
+        run: npm run lint
+      - name: unit test
+        run: npm test
