@@ -1,4 +1,5 @@
 name: code_quality
+
 on:
   push:
     branches:
@@ -23,3 +24,6 @@ jobs:
         run: npm run lint
       - name: unit test
         run: npm test
+
+      - name: supertest
+        run: npm run test-supertest
