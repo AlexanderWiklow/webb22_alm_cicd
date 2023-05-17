@@ -1,0 +1,13 @@
+name: Second Workflow
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  echo_branch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Second step
+        run: 'echo branch name: $GITHUB_REF_NAME'
