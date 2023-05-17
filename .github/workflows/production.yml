@@ -11,4 +11,4 @@ jobs:
 
     steps:
       - name: first step
-        run: 'echo branch: main'
+        run: 'echo branch: main now deploying to production'
